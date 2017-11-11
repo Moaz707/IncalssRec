@@ -17,10 +17,10 @@ import nyc.muaadh_melhi_develpoer.resources_for_android_developers.views.Website
 
 public class WebsitesAdapter extends RecyclerView.Adapter<WebsitesViewsHolder> {
 
-    List<DataModel> webisteList;
+    List<DataModel> websiteList;
 
     public WebsitesAdapter(List<DataModel> webisteList) {
-        this.webisteList = webisteList;
+        this.websiteList = webisteList;
     }
 
     @Override
@@ -32,13 +32,13 @@ public class WebsitesAdapter extends RecyclerView.Adapter<WebsitesViewsHolder> {
     @Override
     public void onBindViewHolder(WebsitesViewsHolder holder, int position) {
         WebsitesViewsHolder websitesViewsHolder = (WebsitesViewsHolder) holder;
-        websitesViewsHolder.bind(webisteList.get(position));
+        websitesViewsHolder.bind(websiteList.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-        return webisteList.size();
+        return websiteList.size();
     }
 }
 

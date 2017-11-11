@@ -27,5 +27,14 @@ public class WebsitesViewsHolder extends RecyclerView.ViewHolder {
         description = (TextView) itemView.findViewById(R.id.description);
         link = (TextView) itemView.findViewById(R.id.link);
         pic = (ImageView) itemView.findViewById(R.id.pic);
+
+
+        gener.setText(dataModel.getGener());
+        description.setText(dataModel.getDescription());
+        link.setText(dataModel.getLink());
+        pic.setImageResource(dataModel.getPic());
+
+        //description.setText(dataModel.getDescription());
+
     }
 }
