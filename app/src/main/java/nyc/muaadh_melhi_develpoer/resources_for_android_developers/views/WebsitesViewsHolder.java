@@ -1,6 +1,9 @@
 package nyc.muaadh_melhi_develpoer.resources_for_android_developers.views;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,10 +34,15 @@ public class WebsitesViewsHolder extends RecyclerView.ViewHolder {
 
         gener.setText(dataModel.getGener());
         description.setText(dataModel.getDescription());
-        link.setText(dataModel.getLink());
+        //link.setText(dataModel.getLink());
         pic.setImageResource(dataModel.getPic());
+
+        link.setMovementMethod(LinkMovementMethod.getInstance());
+        String text = dataModel.getLink();
+        link.setText(Html.fromHtml(text));
 
         //description.setText(dataModel.getDescription());
 
     }
+
 }
